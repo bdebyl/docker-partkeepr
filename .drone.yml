@@ -4,7 +4,7 @@ name: default
 
 steps:
   - name: gate-master
-    image: bdebyl/alpine-git
+    image: docker.io/bdebyl/alpine-git
     commands:
       - git fetch origin +refs/heads/master
       - git show-ref
@@ -14,7 +14,7 @@ steps:
         - master
 
   - name: gate-pr
-    image: bdebyl/alpine-git
+    image: docker.io/bdebyl/alpine-git
     commands:
       - git fetch origin +refs/heads/master
       - git show-ref
@@ -37,6 +37,6 @@ steps:
         - master
 ---
 kind: signature
-hmac: 300b395088fd83735e18f13f7d8dd168f463cefb50327afd3a02d86b34bc009d
+hmac: f8ad115c05c68553e49c3c7f42b31c1ccac94dc200137811655f850c42ce69f6
 
 ...
