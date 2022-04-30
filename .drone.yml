@@ -12,6 +12,7 @@ steps:
     commands:
       - git clone https://github.com/bdebyl/docker-partkeepr.git .
       - git checkout $DRONE_COMMIT
+      - echo -n "0.1.$DRONE_BUILD_NUMBER" > .tags
 
   - name: gate-master
     image: docker.io/bdebyl/alpine-git
@@ -47,6 +48,6 @@ steps:
         - master
 ---
 kind: signature
-hmac: 8a8c720de761dcd37979e68190af4de5475980949edc18fae3d8f55b4e115dc3
+hmac: 37536e04d9994882fac9b767f65b4ef1bc840cf4bd42e08104da044c296b93ec
 
 ...
