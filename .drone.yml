@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: default
 
 clone:
@@ -46,6 +47,6 @@ steps:
         - master
 ---
 kind: signature
-hmac: e35fd18a91a41d7610dfec8a2dced25883bc8f33c193fa311e7025393993414a
+hmac: 1c93c58b98d4e808afc52234be440da4d3b59ad15c8be610602edb2ef9be9400
 
 ...
